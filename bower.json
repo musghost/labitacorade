@@ -1,0 +1,26 @@
+{
+  "name": "tacokeeper",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "backbone": "1.1.2",
+    "underscore": "1.6.0",
+    "typeahead.js": "0.10.2",
+    "bootstrap": "3.2.0"
+  },
+  "exportsOverride": {
+  	"backbone": {
+      "js/vendor": "**/backbone.js"
+    },
+    "underscore": {
+      "js/vendor": "**/underscore.js"
+    },
+    "typeahead.js":{
+      "js/vendor": ["dist/bloodhound.min.js", "dist/typeahead.jquery.min.js"]
+    }
+  }
+}

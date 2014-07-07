@@ -1,0 +1,36 @@
+doctype html
+html(lang='es')
+	include template/header
+	body(class="login fadein", data-page="signup")
+		div(class="container", id="login-block")
+			div.row
+				div(class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4")
+					div(class="login-box clearfix animated flipInY")
+						div(class="page-icon animated bounceInDown")
+							img(src="assets/img/account/register-icon.png", alt="Register icon")
+						div.login-logo
+							a(href="#?login-theme-3")
+								img(src="assets/img/account/login-logo.png", alt="Company Logo")
+						hr
+						div.login-form
+							if errors
+								div(class="alert alert-danger")
+									button(type="button", class="close", data-dismiss="alert") x
+									h4 Error!
+									each error in errors
+										p= error.msg
+							form(action="/signup", method="post")
+								input(type="text", placeholder="Username", class="input-field", name="username", required)
+								input(type="email", placeholder="E-mail", class="input-field", name="email", required)
+								input(type="text", placeholder="Name", class="input-field", name="name", required)
+								input(type="password", placeholder="Password", class="input-field", name="password", required)
+								input(type="password", placeholder="Confirm Password", class="input-field", name="passwordconfirm", required)
+								label.checkbox
+									input(type="checkbox", value="option1", required) 
+									| I agree to something I will never read
+								button(type="submit" class="btn btn-login") Sign Up
+							div.login-links
+								a(href="password_forgot.html") Forgot password?
+								br
+								a(href="login.html") Already have an account? <strong>Sign In</strong>
+		include template/footer

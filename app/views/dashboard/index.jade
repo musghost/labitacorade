@@ -1,0 +1,64 @@
+doctype html
+html(lang='es')
+	include template/header
+	body(data-page='dashboard')
+		header
+			div.header.navbar.navbar-inverse.box-shadow.navbar-fixed-top
+				div.navbar-inner
+					div.header-seperation
+						ul.nav.navbar-nav
+							li.sidebar-toggle-box
+								a(href='#')
+									span.icon-bar
+									span.icon-bar
+									span.icon-bar
+							li
+								a(href='#')
+									strong labitacora.de
+							li.hidden-xs
+								div.hoy
+									div.btn-group
+										a.con(data-toggle='dropdown', href='#')
+											span.glyphicon.glyphicon-bell
+												span.label.label-danger 33
+										ul.dropdown-menu.pull-right.dropdown-alerts(role='menu')
+											li.title
+												span.icon.icon-bell
+												| &nbsp;&nbsp; There are 5 new alerts in the system
+											li.alert
+												div.alert-icon.alt-default
+													span.fa.fa-check-square
+												div.alert-content Quality check was successful
+												div.alert-time 32 sec ago
+									div.btn-group
+										a.con(href='#')
+											span.glyphicon.glyphicon-envelope
+												span.label.label-danger 10
+									div.btn-group
+										a.con(href='#')
+											span.glyphicon.glyphicon-cog
+		div#main
+			section#sidebar
+				div.logo-section
+					img(src='/images/labitacora_logo.png', alt='labitacora.de')
+				ul#nav-accordion
+					li
+						h3 Dashboard
+					li
+						a(href='#')
+							span.glyphicon.glyphicon-th
+							|  Mis bitácoras
+					li
+						a(href='#')
+							span.glyphicon.glyphicon-chevron-right
+							|  Bitácora 1
+					li
+						a(href='#')
+							span.glyphicon.glyphicon-chevron-right
+							|  Bitácora 2
+					li
+						h3 Perfil
+					li
+						a(href='#')
+							span.glyphicon.glyphicon-user
+							|  Andrés Cidel

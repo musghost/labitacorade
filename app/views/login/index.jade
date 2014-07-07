@@ -1,0 +1,29 @@
+doctype html
+html(lang='es')
+	include template/header
+	body(class="login fadein", data-page="signup")
+		div(class="container", id="login-block")
+			div.row
+				div(class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4")
+					div(class="login-box clearfix")
+						div.login-logo
+							a(href="#?login-theme-3")
+								img(src="/images/labitacora_logo.png", alt="Company Logo")
+						hr
+						div.login-form
+							if errors
+								div(class="alert alert-danger")
+									button(type="button", class="close", data-dismiss="alert") x
+									h4 Error!
+									each error in errors
+										p= error.msg
+							form(action="/login", method="post")
+								input(type="text", placeholder="Nombre de usuario", class="input-field form-control user", name="username")
+								input(type="password", placeholder="Contraseña", class="input-field form-control password", name="password")
+								div.buttons
+									button(type="submit", class="btn btn-login") Entrar
+							div.login-links
+								a(href="password_forgot.html") ¿Olvidaste tu contrase&ntilde;a?
+								br
+								a(href="signup.html") ¿No tienes una cuenta? <strong>Reg&iacute;strate</strong>
+		include template/footer

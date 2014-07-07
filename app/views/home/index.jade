@@ -1,0 +1,159 @@
+doctype html
+html(lang='es')
+	include template/header
+	body(data-page="principal")
+		header
+			div.container
+				img(src="/images/labitacora_logo.png", alt="labitacora.de")
+				a.btn.pull-right.enter-site(href='/user/login') Entrar
+				span.pull-right.menu-links
+					a(href='#') Acerca de
+					a(href='#') Contacto
+		section#wood
+			div.container
+				div.row
+					section#intro-description.col-sm-7.col-md-7.animated.fadeInLeft
+						h1
+							strong labitacora.de 
+							| es la mejor manera de 
+							strong Compartir 
+							| con tus amigos 
+							strong tus secretos
+						.intro-feature
+							h4
+								span.glyphicon.glyphicon-ok
+								|  Lorem ipsum consectetur adipisicing dolor
+							p
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+								| labore et dolore magna aliqua ullamco laboris aliquipea commodo consequat.
+						.intro-feature
+							h4
+								span.glyphicon.glyphicon-ok 
+								|  Lorem ipsum dolor amet, consectetur adipisicing
+							p
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+								| labore et dolore magna aliqua ullamco laboris aliquipea commodo consequat.
+						.intro-feature
+							h4
+								span.glyphicon.glyphicon-ok
+								|  Lorem ipsum dolor, consectetur adipisicing
+							p
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+								| labore et dolore magna aliqua ullamco laboris aliquipea commodo consequat.
+					section#intro-form.col-sm-5.col-md-5
+						.form_register
+							h2 ¡Reg&iacute;strate ahora! 
+							form.row(action='contact.php', name='contactform', method='post', novalidate='novalidate')
+								#input_name.col-md-12
+									input#name.form-control(type='text', name='first_name', placeholder='Correo electrónico')
+								#input_email.col-md-12
+									input#email.form-control(type='text', name='email', placeholder='Contraseña')
+								#input_phone.col-md-12
+									input#phone.form-control(type='text', name='phone', placeholder='Confirma tu contraseña')
+								#input_message.col-md-12
+									input#comments.form-control(type='text', name='message', rows='6', placeholder='labitacora.de/')
+								p No venderemos ni rentaremos tu correo electrónico Al registrarte aceptas los Términos y Condiciones de Servicio así como el Aviso de Privacidad. 
+								#form_register_btn.text-center
+									button#submit.btn.btn-lg(type='submit') Registrarme
+		section#about
+			div.container
+				div.row
+					div.col-md-12.titlebar
+						h1 Some <strong>words about</strong> us
+						p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
+				div.row
+					div#about-1-text.col-md-6
+						h4 What we do?
+						
+						p
+							| Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni 
+							| dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, 
+							| Numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.
+
+						div#accordion_holder
+							h4 Why choose us?
+							
+							ul.accordion.clearfix
+								li#text-1.active
+									a(href='#text1') Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+									div
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+											| Nostrud exercitation ullamco laboris aliquipea commodo consequat. 		
+								li#text-2.active
+									a(href='#text1') Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+									div
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+											| Nostrud exercitation ullamco laboris aliquipea commodo consequat. 		
+								li#text-3.active
+									a(href='#text1') Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+									div
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+											| Nostrud exercitation ullamco laboris aliquipea commodo consequat. 		
+					div#about-1-img.col-md-6.text-center
+						img.img-responsive(src='/images/why.png', alt='image')
+		section#discover
+			div.container
+				div.row
+					div.col-md-6
+						h4 Descubre m&aacute;s acerca de nosotros
+						p Voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, Numquam eius modi tempora incidunt, aliquam quaerat voluptatem.
+						div
+							iframe(width='100%', height='315', src='//www.youtube.com/embed/3BzW9ya8fnI', frameborder='0', allowfullscreen)
+					div.col-md-6
+						h4 Our Philosophy
+						p Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores ratione voluptatem nesciunt, neque porro quisquam dolore magnam aliquam quaerat voluptatem. Neque porro quisquam est, qui dolorem ipsum, quia dolor sit, Numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.
+		section#stuff
+			div.container
+				div.row
+					div.col-md-12.titlebar
+						h1 Our awesome <strong>features</strong>
+						p Praesent semper, lacus sed cursus porta, odio augue feugiat tincidunt ligula massa in primis faucibus posuere cubilia
+				div.row
+					div.col-sm-6.col-md-4
+						div.feature-box-icon
+								span.glyphicon.glyphicon-eye-open
+						div.feature-box-content
+							h4 Responsive Design
+							p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+					div.col-sm-6.col-md-4
+						div.feature-box-icon
+								span.glyphicon.glyphicon-cog
+						div.feature-box-content
+							h4 Responsive Design
+							p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+					div.col-sm-6.col-md-4
+						div.feature-box-icon
+								span.glyphicon.glyphicon-flag
+						div.feature-box-content
+							h4 Responsive Design
+							p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+				div.row
+					div.col-sm-6.col-md-4
+						div.feature-box-icon
+								span.glyphicon.glyphicon-eye-open
+						div.feature-box-content
+							h4 Responsive Design
+							p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+					div.col-sm-6.col-md-4
+						div.feature-box-icon
+								span.glyphicon.glyphicon-cog
+						div.feature-box-content
+							h4 Responsive Design
+							p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+					div.col-sm-6.col-md-4
+						div.feature-box-icon
+								span.glyphicon.glyphicon-flag
+						div.feature-box-content
+							h4 Responsive Design
+							p Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+		footer
+			div.container
+				div
+					a(href='#') Acerca de
+					a(href='#') Contacto
+					a(href='#') Aviso legal y de privacidad
+					a(href='#') Manual de usuario
+				p  Derechos reservados 2014 - labitacora.de
