@@ -1,3 +1,6 @@
+html{
+	height: 100%;
+}
 body{
 	background: #efefef;
 }
@@ -103,4 +106,247 @@ ul.sidebar-menu li a.active i {
 		width: 90px;
 		margin: 20px 0;
 	}
+}
+.nav .btn-group a{
+	color: #4d4d4d;
+	span.glyphicon{
+		font-size: 15px;
+		position: relative;
+		margin-right: 20px;
+		margin-top: 10px;
+
+		span.label{
+			position: absolute;
+			top: -9px;
+			left: 10px;
+			font-size: 10px;
+			padding: 1px 3px 4px;
+		}
+	}
+}
+#content{
+	left: 208px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	overflow: auto;
+	& > div{
+		margin-top: 40px;
+		padding: 20px;
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		&:after{
+			clear: both;
+			content: "";
+			display: block;
+		}
+	}
+	&:after{
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
+#powerwidgets{
+	header{
+		height: 40px;
+		padding: 0 0 0 10px;
+		line-height: 40px;
+		background: #5bc0de;
+		color: #fff;
+		border-radius: 3px 3px 0 0;
+		h2{
+			font-weight: 300;
+			font-size: 21px;
+			line-height: 40px;
+		}
+	}
+	.inner-spacer{
+		padding: 10px;
+	}
+	.tmtimeline{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: relative;
+
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 7px;
+			background: #d8e3e6;
+			left: 20%;
+			margin-left: -8px;
+		}
+
+		& > li{
+			.tmtime{
+				display: block;
+				width: 25%;
+				padding-right: 10%;
+				position: absolute;
+				span{
+					display: block;
+					padding-right: 10px;
+					text-align: right;
+					color: #858689;
+				}
+				span:first-child{
+					font-size: 0.9em;
+				}
+				span:last-child{
+					font-size: 2.1em;
+				}
+				&:before{
+					display: block;
+					content: '';
+					position: absolute;
+					top: 21px;
+					right: -18px;
+					background: #d8e3e6;
+					height: 7px;
+					width: 20%;
+					z-index: 2;
+				}
+			}
+			.tmicon{
+				width: 45px;
+				height: 45px;
+				font-size: 0;
+				position: relative;
+				border-radius: 50%;
+				box-shadow: 0 0 0 7px #d8e3e6;
+				text-align: center;
+				left: 20%;
+				padding: 5px;
+				border: 5px solid #fff;
+				top: 5px;
+				margin: 0 0 0 -27px;
+				background-color: #fff;
+				&:before{
+					font-family: 'FontAwesome';
+					font-size: 20px;
+					color: #fff;
+				}
+				/*&:after{
+					position: absolute;
+					content: "";
+					-webkit-box-sizing: content-box;
+					-moz-box-sizing: content-box;
+					box-sizing: content-box;
+				}*/
+			}
+			&:nth-child(odd){
+				.tmlabel{
+					background: #f9f9f9;
+					&:after{
+						border-right-color: #f9f9f9;
+					}
+				}
+			}
+			.tmcomment{
+				margin: 0 0 15px 25%;
+				padding: 0 10px 5px 10px;
+				position: relative;
+				background: #fff;
+				border: 1px solid #ddd;
+				border-top: 0;
+				ul{
+					padding-left: 30px;
+					list-style: none;
+					border-top: 1px solid #ddd;
+				}
+				li{
+					position: relative;
+					padding: 10px 0px 0px;
+					& > div{
+						margin-left: 40px;
+						font-size: 11.5px;
+						overflow: hidden;
+					}
+					& + li{
+						padding-top: 0;
+					}
+				}
+				img{
+					width: 30px;
+					height: 30px;
+					position: absolute;
+					left: 0;
+				}
+				form{
+					overflow: hidden;
+					position: relative;
+					border-top: 1px solid #ddd;
+					padding-top: 10px;
+					.content-input{
+						margin-left: 40px;
+					}
+					textarea{
+						height: 30px;
+						padding: 3px 6px;
+						font-size: 12px;
+						color: #757575;
+						letter-spacing: 0.1px;
+						border: 1px solid #ddd;
+						width: 100%;
+						box-sizing: border-box;
+						outline: 0px none;
+						resize: none;
+					}
+				}
+			}
+			.tmlabel{
+				margin: -40px 0 0 25%;
+				background: #f1f1f1;
+				padding: 15px 15px 0 15px;
+				overflow: hidden;
+				padding-left: 40px;
+				position: relative;
+				border: 1px solid #ddd;
+				border-bottom: 0;
+				border-radius: 3px 3px 0 0;
+				h2{
+					margin-top: 0px;
+					font-weight: 700;
+					font-size: 1.2em;
+					padding: 0;
+					a{
+						color: #005968;
+					}
+					.person{
+						display: inline-block;
+						margin-right: 10px;
+						img{
+							width: 30px;
+							height: 30px;
+						}
+					}
+				}
+				p{
+					font-weight: 400;
+					font-size: 13px;
+					letter-spacing: 0.1px;
+				}
+				&:after{
+					left: 10px;
+					content: "";
+					height: 15px;
+					background: #d8e3e6;
+					box-shadow: 0 0 0 5px #fff;
+					width: 15px;
+					border-radius: 50%;
+					position: absolute;
+					top: 10px;
+				}
+			}
+		}
+	}
+}
+#timelineexample{
+	background: #fff;
+	border-radius: 3px;
 }
